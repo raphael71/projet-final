@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+  <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+     
+      <button ion-item (click)="openPage(loginPage)">
+        Login
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        Signup
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+    <ion-title>Accueil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <h2>Bienvenue sur mon Portfolio!</h2>
+  <button ion-button block color="secondary" [navPush]="projet">Mes Projets</button>
+  <button ion-button block color="secondary" [navPush]="MonCV">Mon CV</button>
+  <button ion-button block color="secondary">Contactez-moi</button>
+
+
+
+
+</ion-content>
